@@ -1,0 +1,26 @@
+<?php
+
+namespace Mathcore\Expression\Independent\Numeric;
+
+use Mathcore\Expression\Expression;
+use Mathcore\Expression\Independent\Numeric\Inteface\NumericInterface;
+
+class Decimal extends Expression implements NumericInterface
+{
+    private float $value;
+
+    public function __construct(float $value)
+    {
+        $this->value = $value;
+    }
+
+    public function getValue(): float
+    {
+        return $this->value;
+    }
+
+    public function isNegative() : bool
+    {
+        return $this->value < 0;
+    }
+}
