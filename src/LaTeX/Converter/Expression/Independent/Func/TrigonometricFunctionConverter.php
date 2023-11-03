@@ -1,4 +1,7 @@
 <?php
+
+namespace Mathcore\LaTeX\Converter\Expression\Independent\Func;
+
 use Mathcore\Expression\Expression;
 use Mathcore\Expression\Independent\Func\TrigonometricFunction;
 use Mathcore\LaTeX\Converter\LaTeXConverter;
