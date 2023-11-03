@@ -3,15 +3,15 @@
 namespace Mathcore\Container;
 
 use MAthcore\Container\Exception\InvalidContainableTypeException;
-use Mathcore\Container\Inteface\ContainableInteface;
-use Mathcore\Container\Inteface\ContainerInteface;
+use Mathcore\Container\Interface\ContainableInterface;
+use Mathcore\Container\Interface\ContainerInteface;
 use Mathcore\Expression\Expression;
 
 class ExpressionContainer implements ContainerInteface
 {
     private array $expressions = [];
 
-    public function addItem(ContainableInteface $item): void
+    public function addItem(ContainableInterface $item): void
     {
         if ($item instanceof Expression) {
             $this->expressions[] = $item;

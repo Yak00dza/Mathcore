@@ -2,9 +2,9 @@
 
 namespace Mathcore\Expression;
 
-use Mathcore\Container\Inteface\ContainableInteface;
+use Mathcore\Container\Interface\ContainableInterface;
 
-class Expression implements ContainableInteface
+class Expression implements ContainableInterface
 {
 
 }
