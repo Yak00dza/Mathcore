@@ -1,6 +1,6 @@
 <?php
 
-namespace Mathcore\Container\Inteface;
+namespace Mathcore\Container\Interface;
 
 interface ContainableInteface
 {
