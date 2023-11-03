@@ -2,7 +2,7 @@
 
 namespace Mathcore\Container\Interface;
 
-interface ContainableInteface
+interface ContainableInterface
 {
     
 }
