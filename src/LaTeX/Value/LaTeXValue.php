@@ -2,7 +2,9 @@
 
 namespace Mathcore\LaTeX\Value;
 
-class LaTeXValue
+use Mathcore\Container\Interface\ContainableInterface;
+
+class LaTeXValue implements ContainableInterface
 {
     private string $value;
 
@@ -12,6 +14,11 @@ class LaTeXValue
     }
 
     public function getValue(): string
+    {
+        return $this->value;
+    }
+
+    public function __toString(): string
     {
         return $this->value;
     }
