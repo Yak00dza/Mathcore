@@ -9,18 +9,19 @@ use Mathcore\Validator\TypeValidator;
 
 abstract class AbstractContainer implements FactorableInterface
 {
-    protected string $CONTAINED_TYPE;
+    protected static string $containedType = ContainableInterface::class;
     private array $items;
 
     private TypeValidator $typeValidator;
 
     private ArrayValidator $arrayValidator;
-    public function __construct()
+    public function __construct(?array $items = array())
     {
-        $this->typeValidator = new TypeValidator($this->CONTAINED_TYPE);
+        $this->typeValidator = new TypeValidator(self::$containedType);
         $this->arrayValidator = new ArrayValidator($this->typeValidator);
 
-        $this->items = array();
+        null !== $items && $this->arrayValidator->validate($items);
+        $this->items = $items;
     }
 
     public function addItem(ContainableInterface $item): self
@@ -43,8 +44,8 @@ abstract class AbstractContainer implements FactorableInterface
         return $this->items;
     }
 
-    public function getContainedType(): string
+    public static function getContainedType(): string
     {
-        return $this->CONTAINED_TYPE;
+        return static::$containedType;
     }
 }

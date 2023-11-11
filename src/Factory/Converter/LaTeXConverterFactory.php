@@ -1,9 +1,9 @@
 <?php
 
-namespace Mathcore\Factory\LaTeX;
+namespace Mathcore\Factory\Converter;
 use Mathcore\Converter\Container\ContainerConverter;
-use Mathcore\Converter\LaTeX\Expression\ExpressionConverter;
 use Mathcore\Converter\LaTeX\LaTeXConverter;
+use Mathcore\Converter\LaTeX\UniversalLaTeXConverter;
 use Mathcore\Factory\Interface\FactoryInterface;
 use Mathcore\Validator\TypeValidator;
 
@@ -16,6 +16,6 @@ class LaTeXConverterFactory implements FactoryInterface
          */
         $converter =  str_replace('Expression', 'Converter\\LaTeX\\Expression', $class).'Converter';
 
-        return new $converter(new TypeValidator($class), new ContainerConverter(new ExpressionConverter()));
+        return new $converter(new TypeValidator($class), new ContainerConverter(new UniversalLaTeXConverter()));
     }
 }

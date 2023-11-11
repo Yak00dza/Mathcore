@@ -6,5 +6,5 @@ use Mathcore\Expression\Expression;
 
 class ExpressionContainer extends AbstractContainer
 {
-    protected string $CONTAINED_TYPE = Expression::class;
+    protected static string $containedType = Expression::class;
 }

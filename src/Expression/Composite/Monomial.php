@@ -9,9 +9,14 @@ class Monomial extends Expression
 {
     private ExpressionContainer $container;
 
-    public function __construct()
+    public function __construct(?ExpressionContainer $container = new ExpressionContainer())
     {
-        $this->container = new ExpressionContainer();
+        $this->container = $container;
+    }
+
+    public function getFactors(): ExpressionContainer
+    {
+        return $this->container;
     }
 
     public function addFactor(Expression $factor): self
