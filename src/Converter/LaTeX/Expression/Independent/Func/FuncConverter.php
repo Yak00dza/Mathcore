@@ -3,13 +3,13 @@
 namespace Mathcore\Converter\LaTeX\Expression\Independent\Func;
 
 use Mathcore\Container\LaTeXContainer;
-use Mathcore\Converter\LaTeX\LaTeXConverter;
+use Mathcore\Converter\LaTeX\SpecificLaTeXConverter;
 use Mathcore\Expression\Expression;
 use Mathcore\Expression\Independent\Func\Func;
 use Mathcore\Expression\Independent\Func\TrigonometricFunction;
 use Mathcore\LaTeX\Value\LaTeXValue;
 
-class FuncConverter extends LaTeXConverter
+class FuncConverter extends SpecificLaTeXConverter
 {
     public function convert(Expression $expression): LaTeXValue
     {

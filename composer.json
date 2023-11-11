@@ -1,6 +1,9 @@
 {
     "name": "yak00za/mathcore",
     "description": "Core for math application",
+    "require": {
+        "php": ">=8.2"
+    },
     "autoload": {
         "psr-4": {
             "Mathcore\\": "src/"

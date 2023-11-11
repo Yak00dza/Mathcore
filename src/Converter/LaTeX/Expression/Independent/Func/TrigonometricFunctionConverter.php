@@ -4,12 +4,12 @@ namespace Mathcore\Converter\LaTeX\Expression\Independent\Func;
 
 use InvalidArgumentException;
 use Mathcore\Container\LaTeXContainer;
-use Mathcore\Converter\LaTeX\LaTeXConverter;
+use Mathcore\Converter\LaTeX\SpecificLaTeXConverter;
 use Mathcore\Expression\Expression;
 use Mathcore\Expression\Independent\Func\TrigonometricFunction;
 use Mathcore\LaTeX\Value\LaTeXValue;
 
-class TrigonometricFunctionConverter extends LaTeXConverter
+class TrigonometricFunctionConverter extends SpecificLaTeXConverter
 {
     public function convert(Expression $expression): LaTeXValue
     {

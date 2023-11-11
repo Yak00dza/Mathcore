@@ -48,4 +48,9 @@ abstract class AbstractContainer implements FactorableInterface
     {
         return static::$containedType;
     }
+
+    public function getLength(): int
+    {
+        return sizeof($this->items);
+    }
 }

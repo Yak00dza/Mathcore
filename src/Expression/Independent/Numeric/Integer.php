@@ -9,9 +9,10 @@ class Integer extends Expression implements NumericInterface
 {
     private int $value;
 
-    public function __construct(int $value)
+    public function __construct(int $value, Expression $power = null)
     {
         $this->value = $value;
+        parent::__construct($power);
     }
 
     public function getValue(): int

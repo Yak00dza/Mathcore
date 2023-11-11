@@ -5,18 +5,16 @@ namespace Mathcore\Expression\Composite;
 use Mathcore\Container\ExpressionContainer;
 use Mathcore\Expression\Expression;
 
-class Polynomial extends Expression
+class Polynomial extends CompositeExpression
 {
-    private ExpressionContainer $container;
-
-    public function __construct()
+    public function getTerms(): ExpressionContainer
     {
-        $this->container = new ExpressionContainer();
+        return $this->container;
     }
 
-    public function addTerm(Expression $term): self
+    public function addTerm(Expression $factor): self
     {
-        $this->container->addItem($term);
+        $this->container->addItem($factor);
         return $this;
     }
 }

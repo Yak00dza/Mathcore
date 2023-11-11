@@ -2,12 +2,12 @@
 
 namespace Mathcore\Converter\LaTeX\Expression\Independent\Numeric;
 
-use Mathcore\Converter\LaTeX\LaTeXConverter;
+use Mathcore\Converter\LaTeX\SpecificLaTeXConverter;
 use Mathcore\Expression\Expression;
 use Mathcore\Expression\Independent\Numeric\Decimal;
 use Mathcore\LaTeX\Value\LaTeXValue;
 
-class DecimalConverter extends LaTeXConverter
+class DecimalConverter extends SpecificLaTeXConverter
 {
     public function convert(Expression $expression): LaTeXValue
     {
