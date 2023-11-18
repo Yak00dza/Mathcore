@@ -17,7 +17,7 @@ abstract class AbstractComparison
     /**
      * Returns an integer less than, equal to or greater than zero if $a is considered
      * less than, equal to or greater than $b respectively.
-     * Is meant to be used in build-in usort() method.
+     * Is meant to be used in usort() method.
      *
      * @param ContainableInterface $a
      * @param ContainableInterface $b
