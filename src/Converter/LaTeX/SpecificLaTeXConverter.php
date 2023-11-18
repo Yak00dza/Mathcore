@@ -23,10 +23,14 @@ abstract class SpecificLaTeXConverter implements FactorableInterface, ConverterI
     protected ContainerConverter $containerConverter;
 
     protected UniversalLaTeXConverter $internalConverter;
-    public function __construct(TypeValidator $typeValidator, ContainerConverter $containerConverter)
-    {
+    public function __construct(
+        TypeValidator $typeValidator,
+        ContainerConverter $containerConverter,
+        UniversalLaTeXConverter $internalConverter
+    ) {
         $this->typeValidator = $typeValidator;
         $this->containerConverter = $containerConverter;
+        $this->internalConverter = $internalConverter;
     }
 
     public abstract function convert(Expression $expression): LaTeXValue;

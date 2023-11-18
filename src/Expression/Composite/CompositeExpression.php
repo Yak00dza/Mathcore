@@ -21,6 +21,11 @@ abstract class CompositeExpression extends Expression
         parent::__construct($power);
     }
 
+    public function getItems(): ExpressionContainer
+    {
+        return $this->container;
+    }
+
     public function countItems(): int
     {
         return $this->container->getLength();

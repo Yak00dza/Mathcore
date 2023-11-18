@@ -3,7 +3,7 @@
 namespace Mathcore\Expression\Independent\Numeric;
 
 use Mathcore\Expression\Expression;
-use Mathcore\Expression\Independent\Numeric\Inteface\NumericInterface;
+use Mathcore\Expression\Independent\Numeric\Interface\NumericInterface;
 
 class Decimal extends Expression implements NumericInterface
 {

@@ -31,7 +31,7 @@ abstract class ContainerSorter implements FactorableInterface
         $array = $container->toArray();
         usort($array, [$this->comparison, 'compare']);
 
-        $container = self::getContainerType();
+        $container = static::getContainerType();
         return new $container($array);
     }
 
