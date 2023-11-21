@@ -10,11 +10,13 @@ use Mathcore\Validator\TypeValidator;
 abstract class AbstractContainer implements FactorableInterface
 {
     protected static string $containedType = ContainableInterface::class;
+    
     private array $items;
 
     private TypeValidator $typeValidator;
 
     private ArrayValidator $arrayValidator;
+    
     public function __construct(?array $items = array())
     {
         $this->typeValidator = new TypeValidator(self::$containedType);
