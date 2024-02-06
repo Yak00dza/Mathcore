@@ -1,6 +1,6 @@
 {
     "name": "yak00za/mathcore",
-    "description": "Core for math application",
+    "description": "Core for math applications",
     "require": {
         "php": ">=8.2"
     },

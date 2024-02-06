@@ -3,6 +3,7 @@
 namespace Mathcore\Expression;
 
 use Mathcore\Container\Interface\ContainableInterface;
+use Mathcore\Expression\Independent\Numeric\Integer;
 use Mathcore\Expression\VTO\ExponentiationRule;
 
 class Expression implements ContainableInterface
@@ -16,9 +17,22 @@ class Expression implements ContainableInterface
         $this->power = $power;
     }
 
+    public function squared(): Expression
+    {
+        $copy = clone $this;
+        $copy->setPower(new Integer(2));
+        return $copy;
+    }
+
     public function getPower(): ?Expression
     {
         return $this->power;
+    }
+
+    public function setPower(Expression $power): self
+    {
+        $this->power = $power;
+        return $this;
     }
 
     public function hasPower(): bool
