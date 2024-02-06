@@ -6,5 +6,5 @@ use Mathcore\Converter\LaTeX\Expression\Composite\CompositeExpressionConverter;
 
 class PolynomialConverter extends CompositeExpressionConverter
 {
-    protected static string $separator = '+';
+    protected static string $separator = ' + ';
 }
