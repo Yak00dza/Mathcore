@@ -12,18 +12,20 @@ abstract class ExpressionOrderComparison extends AbstractComparison
 {
     protected static string $priority = '';
 
-    protected static array $baseOrder = [];
+    protected static array $order = [];
 
     public function compare(ContainableInterface $a, ContainableInterface $b): int
     {
-        /**
-         * @var Expression $a
-        * @var Expression $b
-        */
-        $this->typeValidator->validate($a);
-        $this->typeValidator->validate($b);
+       return 0;
+    }
 
-        //TODO: Reimplement
+    public function compareByBase(Expression $a, Expression $b, bool $comparedBefore = false): int
+    {
+        return 0;
+    }
+
+    public function compareByPower(Expression $a, Expression $b, bool $comparedBefore = false): int
+    {
         return 0;
     }
 

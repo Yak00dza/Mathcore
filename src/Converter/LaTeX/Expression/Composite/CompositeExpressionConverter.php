@@ -3,13 +3,9 @@
 namespace Mathcore\Converter\LaTeX\Expression\Composite;
 
 use Mathcore\Container\LaTeXContainer;
-use Mathcore\Container\Sorter\Expression\ExpressionOrderSorter;
 use Mathcore\Converter\LaTeX\SpecificLaTeXConverter;
 use Mathcore\Expression\Composite\CompositeExpression;
-use Mathcore\Expression\Composite\Monomial;
 use Mathcore\Expression\Expression;
-use Mathcore\Factory\Container\Sorter\ExpressionOrderSorterFactory;
-use Mathcore\Factory\Container\Sorter\SorterFactory;
 use Mathcore\LaTeX\Value\LaTeXValue;
 
 abstract class CompositeExpressionConverter extends SpecificLaTeXConverter
@@ -22,10 +18,6 @@ abstract class CompositeExpressionConverter extends SpecificLaTeXConverter
 
         $container = $expression->getItems();
 
-        $sorter = ExpressionOrderSorterFactory::get($expression::class);
-
-        /** @var ExpressionOrderSorter $sorter */
-        $container = $sorter->sort($container);
         $container = $this->containerConverter->convert($container, LaTeXContainer::class);
 
         $array = $container->toArray();

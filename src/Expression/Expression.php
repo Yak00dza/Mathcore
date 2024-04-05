@@ -3,6 +3,7 @@
 namespace Mathcore\Expression;
 
 use Mathcore\Container\Interface\ContainableInterface;
+use Mathcore\Expression\Composite\CompositeExpression;
 use Mathcore\Expression\Independent\Numeric\Integer;
 use Mathcore\Expression\VTO\ExponentiationRule;
 
@@ -43,5 +44,10 @@ class Expression implements ContainableInterface
     public static function getExponentiationRule(): string
     {
         return static::$exponentiationRule;
+    }
+
+    public function isComposite(): bool
+    {
+        return $this instanceof CompositeExpression;
     }
 }

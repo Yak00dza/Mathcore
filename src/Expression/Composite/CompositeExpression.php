@@ -26,6 +26,11 @@ abstract class CompositeExpression extends Expression
         return $this->container;
     }
 
+    public function setItems(ExpressionContainer $items): void
+    {
+        $this->container = $items;
+    }
+
     public function countItems(): int
     {
         return $this->container->getLength();

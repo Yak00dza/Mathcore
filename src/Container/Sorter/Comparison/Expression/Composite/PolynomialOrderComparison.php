@@ -16,7 +16,7 @@ class PolynomialOrderComparison extends ExpressionOrderComparison
 {
     protected static string $priority = ComparingPriority::POWER;
 
-    protected static array $baseOrder = [
+    protected static array $order = [
         Decimal::class => 5,
         Integer::class => 5,
         Variable::class => 4,
